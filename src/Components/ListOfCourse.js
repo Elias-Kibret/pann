@@ -5,15 +5,16 @@ const ListOfCourse = (props) => {
     const navigate = useNavigate()
     const [sorted,setSorted]=useState([courses])
 const handleRoute=(type)=>{
+    console.log(type)
     if(type==="Visual"){
         navigate("/visual")
     }
-    if(type==="Video")
+    else if(type==="Audio")
     {
         navigate("/audio")
     }
-    if(type==="Kinesthetic"){
-        navigate("")
+    else if(type==="Kinesthetic"){
+        navigate("/Kinesthetic")
     }
 
 
@@ -31,7 +32,7 @@ useEffect(()=>{
         }
     }    
     )
-     if(props.search.length!=0){
+     if(props.search.length!==0){
         setSorted(props.search)
         
      }
@@ -47,7 +48,7 @@ useEffect(()=>{
         {
             sorted.map((item,index)=>{
                 return(
-                    <div className='bg-white px-4 py-6 my-4 rounded-lg flex'onClick={()=>handleRoute(item.type)}>
+                    <div key={item+index} className='bg-white px-4 py-6 my-4 rounded-lg flex'onClick={()=>handleRoute(item.type)}>
                     <div className='w-[100px] h-100px '>
                     <img src={item.img}/>
                     </div>

@@ -41,7 +41,7 @@ const Welcome = () => {
                                     nav.map((item,index)=>{
                                         return (
                             
-                                            <button  className='mx-5 text-black' onClick={()=>{setSort(item)}}>{item}</button>
+                                            <button key={item+index}  className='mx-5 text-black' onClick={()=>{setSort(item)}}>{item}</button>
                             
                                         )
                                     })
