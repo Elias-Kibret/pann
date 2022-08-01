@@ -22,29 +22,32 @@ const handleRoute=(type)=>{
 useEffect(()=>{
     let item=[];
     item=courses.filter((items,index)=>{
-        if(props.data==='All'){
+        
+        if(props.data==='All' ){
             return items
         }
         else{
-            return items.category===props.data
+            return items.category===props.data 
         }
-    }
-    
-    
+    }    
     )
-    setSorted(item)
-},[props.data])
+     if(props.search.length!=0){
+        setSorted(props.search)
+        
+     }
+     else{
+         setSorted(item)
+     }
+   
+},[props.data,props.search])
 
-console.log(sorted)
 
   return (
     <div  className='mx-4' >
         {
             sorted.map((item,index)=>{
                 return(
-                    <div className='bg-white px-4 py-6 my-4 rounded-lg flex'onClick={()=>handleRoute(item.type)} >
-
-                    
+                    <div className='bg-white px-4 py-6 my-4 rounded-lg flex'onClick={()=>handleRoute(item.type)}>
                     <div className='w-[100px] h-100px '>
                     <img src={item.img}/>
                     </div>

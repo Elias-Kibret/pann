@@ -1,13 +1,13 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router , Route, Routes} from "react-router-dom" 
-import LearningTabCongrats from "./components/LearningTabCongrats"
-import LearningTabFeedback from "./components/LearningTabFeedback"
-import LearningTabOverview from "./components/LearningTabOverview"
-import UnderstandingDemAudio from "./components/UnderstandingDemAudio"
-import UnderstandingDemVis from "./components/UnderstandingDemVis"
-import Kinesthetic from './components/Kinesthetic';
-import Home from "./components/Home"
+import LearningTabCongrats from "./Components/LearningTabCongrats"
+import LearningTabFeedback from "./Components/LearningTabFeedback"
+import LearningTabOverview from "./Components/LearningTabOverview"
+import UnderstandingDemAudio from "./Components/UnderstandingDemAudio"
+import UnderstandingDemVis from "./Components/UnderstandingDemVis"
+import Kinesthetic from './Components/Kinesthetic'
+import Home from "./Components/Home"
 
 function App() {
     return (
